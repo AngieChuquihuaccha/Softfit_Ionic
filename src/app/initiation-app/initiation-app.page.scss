@@ -1,0 +1,42 @@
+.md{
+    --ion-background-color: #FFFFFF;
+  }
+
+
+  .ios{
+    --ion-background-color: #FFFFFF;
+  }
+
+.texto{
+font-size: 50px;
+font-family: fantasy;
+text-align: center;
+position: absolute;
+color: #113983;
+left: 0px;
+right: 0px;
+top: 65%;
+border: #113983;
+}
+
+.img{
+
+position: relative;
+    left: 37px;
+right: 100px;
+    top: 25%;
+}
+
+ion-content.background{
+    --background: url(https://photoshop-kopona.com/uploads/posts/2018-03/1522485422_39-9.jpg) 0 0/100% 100% no-repeat;
+}
+
+
+.button-style{
+    margin-top: 18px;
+    margin-left: 170px;
+    color: #113983;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+

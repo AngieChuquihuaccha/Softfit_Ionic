@@ -1,0 +1,40 @@
+<ion-header>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&display=swap');
+    </style>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+    <h1>SOFTFIT</h1>
+
+
+  <h2>LOGIN</h2>
+  <form [formGroup]="loginform" (ngSubmit)="login()">
+    <ion-item lines="full">
+      <ion-label position="floating">DNI</ion-label>
+      <ion-input formControlName="usuario" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input formControlName="contraseña" type="password" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" expand="block" shape="round" id="btn">Iniciar Sesion</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </form>
+  <ion-button expand="full" shape="round" fill="clear" (click)="redirigir()" id="registro">Registrarse</ion-button>
+
+</ion-content>

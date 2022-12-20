@@ -1,0 +1,27 @@
+<ion-header>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&display=swap');
+    </style>
+ 
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Mis Datos</ion-card-title>
+    </ion-card-header>
+    <div class="container">
+    <ion-card-content>NOMBRE: {{nombre}}</ion-card-content>
+    <ion-card-content>APELLIDOS: {{apellido}}</ion-card-content>
+    <ion-card-content>NUMERO DE CELULAR: {{celular}}</ion-card-content>
+    <ion-card-content>CORREO ELECTRONICO: {{email}}</ion-card-content>
+    <ion-card-content>DIRECCION: {{direccion}}</ion-card-content>
+
+    <ion-button [routerLink]="['../productos-crud']" type="button" color="danger">
+      Cancelar
+    </ion-button>
+
+  </div>
+  </ion-card>
+</ion-content>

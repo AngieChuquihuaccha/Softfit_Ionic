@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="title">Tienda</ion-title>
+
+    <div class="avatar">
+      <ion-icon name="cart-outline" (click)="redirigirCars()"></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [formControl]="nombre" placeholder="Search"></ion-searchbar>
+
+
+  <ion-card *ngFor="let prod of productos">
+    <img style="margin-left: 65px;margin-top: 25px" alt="40px" src="../../assets/productos-img/{{prod.nombre}}.png" class="img"/>
+    <div class="conteiner">
+    <ion-card-header >
+      <ion-card-title>{{prod.nombre}}</ion-card-title>
+      <ion-card-subtitle>{{prod.marca}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{prod.descripcion}}
+    </ion-card-content>
+  </div>
+    <ion-button color="primary" style="margin-left: 20px; margin-bottom: 20px; color: #113983;" (click)="produc(prod)">Añadir al carrito</ion-button>
+  </ion-card>
+  <ion-button (click)="goDatosPersonales()" color="primary" expand="block" id="btn2">Mis datos</ion-button>
+  <ion-button (click)="cancelar()" color="danger" expand="block" id="btn2">Cerrar Sesion</ion-button>
+
+
+</ion-content>

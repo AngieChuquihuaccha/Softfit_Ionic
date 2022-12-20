@@ -1,0 +1,19 @@
+
+
+<ion-content>
+
+  
+  <h3 style="color: white;"> </h3>
+  <ion-button color="success" (click)="redirigir()" style="margin-top: 15px; margin-left: 30px;">Registrar producto</ion-button>
+
+  <ion-card *ngFor="let prod of productos">
+    <ion-card-header>
+      <ion-card-title>Nombre:  {{prod.nombre}} </ion-card-title>
+      <ion-card-subtitle>Precio: {{prod.precio}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-button color="success" (click)="editarProducto(prod)">Editar</ion-button>
+    <ion-button color="primary" (click)="delete(prod.id)">Eliminar</ion-button>
+  </ion-card>
+  <ion-button (click)="cancelar()" color="danger" expand="block" id="btn2">Cerrar Sesion</ion-button>
+  <ion-button (click)="goDatosPersonales()" color="success" expand="block" id="btn2">Mis datos</ion-button>
+</ion-content>

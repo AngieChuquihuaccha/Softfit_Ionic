@@ -1,0 +1,44 @@
+
+
+<ion-content>
+  <h3 style="color: white;">Hola</h3>
+  <form [formGroup]="productorForm" (ngSubmit)="saveProducto()">
+
+    <ion-item lines="full">
+      <ion-label position="floating">Codigo de Produccion</ion-label>
+      <ion-input formControlName="id" type="text"required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre" type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Precio</ion-label>
+      <ion-input formControlName="precio" type="number" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Tamaño del producto</ion-label>
+      <ion-input formControlName="tamaño" type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Cantidad</ion-label>
+      <ion-input formControlName="stock" type="number" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Descripcion</ion-label>
+      <ion-input formControlName="descripcion" type="text" required></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="success" expand="block" id="btn">{{productoService.productoregistrar ? 'Actualizar':'Guardar'}}</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="cancelar()" color="danger" expand="block" id="btn2">Cancelar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

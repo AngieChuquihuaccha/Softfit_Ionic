@@ -1,0 +1,30 @@
+
+
+<ion-content>
+
+<br>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Carrito de compra</ion-card-title>
+
+    </ion-card-header>
+    <ion-card-content *ngFor="let prod of temporal">
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="../../assets/productos-img/{{prod.IMAPRO}}.png" />
+          </ion-thumbnail>
+          <ion-label>{{prod.NOMPRO}}</ion-label>
+          <ion-label>S/{{prod.importe}}</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <div class="containerCar">
+  <ion-button color="success" (click)="registrarVenta()">Comprar</ion-button>
+  <ion-button [routerLink]="['../productos']" type="button" color="danger">
+    Volver
+  </ion-button>
+</div>
+</ion-content>
